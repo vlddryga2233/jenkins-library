@@ -1,4 +1,4 @@
-def call(List servers,string nodeLabel){  
+def call(List servers, String nodeLabel){  
     pipeline {
         agent {
             node {
