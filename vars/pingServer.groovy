@@ -8,20 +8,11 @@ def call(List servers, String nodeLabel){
         stages {
             stage('Ping module'){
                 parallel {
-                    script{
-                        for(int i in servers.size()){
-                            stage("Ping ${servers.get(i)}") {
-                                    steps {
-                                        sh "ping  ${servers.get(i)} -c 5"
-                                    }
+                    stage("Ping ${servers.get(0)}") {
+                            steps {
+                                sh "ping  ${servers.get(0)} -c 5"
                             }
-                        }
-
                     }
-                    
-
-
-                    
                     stage("Ping ${servers.get(1)}") {
                             steps {
                                 sh "ping ${servers.get(1)} -c 5"
