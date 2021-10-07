@@ -2,7 +2,7 @@ def call(List servers, String nodeLabel){
     pipeline {
         agent {
             node {
-                label ${nodeLabel}
+                label "${nodeLabel}"
             }
         }
         stages {
