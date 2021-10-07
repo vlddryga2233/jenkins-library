@@ -8,17 +8,17 @@ def call(List servers, String nodeLabel){
         stages {
             stage('Ping module'){
                 parallel {
-                    stage("Ping ${servers.get(0)}") {
+                    stage("Ping ") {
                             steps {
                                 sh "ping  ${servers.get(0)} -c 5"
                             }
                     }
-                    stage("Ping ${servers.get(1)}") {
+                    stage("Ping ") {
                             steps {
                                 sh "ping ${servers.get(1)} -c 5"
                             }
                     }
-                    stage('Ping ${server[2]}') {
+                    stage('Ping ') {
                             steps {
                                 sh "ping ${servers.get(2)} -c 5"
                             }
