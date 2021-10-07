@@ -1,4 +1,4 @@
-def Call(List servers){
+def call(List servers){   
     parallel {
         stage('Ping ${server[0]}') {
             steps {
