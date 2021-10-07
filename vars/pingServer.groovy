@@ -1,5 +1,5 @@
 def call(List servers){  
-            for(int i in servers.size()-1)
+            for(int i in server.each)
             {
                 //parallel(
                 //    i : {echo "ping ${servers.get(i)}"    
